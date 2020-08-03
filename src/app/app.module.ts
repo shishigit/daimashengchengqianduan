@@ -8,16 +8,20 @@ import {
     NzButtonModule,
     NzCardModule,
     NzInputModule,
+    NzLayoutModule,
+    NzMenuModule,
     NzNotificationModule,
     NzNotificationServiceModule
 } from "ng-zorro-antd";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ZhuyeComponent} from './page/zhuye/zhuye.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {GerenzhongxinComponent} from './page/gerenzhongxin/gerenzhongxin.component';
 
 @NgModule({
     declarations: [
-        AppComponent, DengluyeComponent, ZhuyeComponent
+        AppComponent, DengluyeComponent, ZhuyeComponent, GerenzhongxinComponent
     ],
     imports: [
         BrowserModule,
@@ -28,7 +32,10 @@ import {ZhuyeComponent} from './page/zhuye/zhuye.component';
         FormsModule,
         NzButtonModule,
         HttpClientModule,
-        NzNotificationModule
+        NzNotificationModule,
+        NzLayoutModule,
+        NzMenuModule,
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

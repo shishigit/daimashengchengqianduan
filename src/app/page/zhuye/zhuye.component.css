@@ -1,0 +1,48 @@
+.layout {
+    min-height: 100vh;
+}
+
+.logo {
+    height: 40px;
+    margin: 12px 24px 16px 0;
+    padding: 5px;
+    float: left;
+    background: aliceblue;
+}
+
+.tuichu {
+    color: white;
+    line-height: 64px;
+    float: right;
+    cursor: pointer;
+}
+
+nz-header {
+    position: fixed;
+    width: 100%;
+    padding-left: 20px;
+}
+
+[nz-menu] {
+    line-height: 64px;
+    display: inline-block;
+}
+
+nz-content {
+    padding: 20px;
+    margin-top: 64px;
+}
+
+.inner-content {
+    background: #fff;
+    padding: 20px;
+    min-height: 380px;
+}
+
+nz-footer {
+    text-align: center;
+}
+
+.ant-menu-submenu-selected {
+    background: #1890ff;
+}

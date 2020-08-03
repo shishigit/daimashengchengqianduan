@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {DengluyeComponent} from "./page/dengluye/dengluye.component";
 import {ZhuyeComponent} from "./page/zhuye/zhuye.component";
+import {GerenzhongxinComponent} from "./page/gerenzhongxin/gerenzhongxin.component";
 
 const routes: Routes = [
     {
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
         path: 'zhuye',
         component: ZhuyeComponent,
+        children: [{
+            path: 'gerenzhongxin',
+            component: GerenzhongxinComponent
+        }]
     },
 ];
 

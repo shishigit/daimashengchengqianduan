@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+import {HttpService} from "../../../service/http.service";
 
 @Component({
     selector: 'app-zhuye',
@@ -7,11 +9,21 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ZhuyeComponent implements OnInit
 {
-    constructor()
+
+    constructor(
+        private readonly httpService: HttpService,
+        private readonly route: Router
+    )
     {
     }
 
     ngOnInit(): void
     {
+    }
+
+    async tuichudenglu()
+    {
+        this.httpService.xitong_tuichu({}).subscribe()
+        await this.route.navigateByUrl('denglu')
     }
 }
