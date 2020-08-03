@@ -18,10 +18,12 @@ import {HttpClientModule} from "@angular/common/http";
 import {ZhuyeComponent} from './page/zhuye/zhuye.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {GerenzhongxinComponent} from './page/gerenzhongxin/gerenzhongxin.component';
+import {HongtianhoutaiComponent} from './page/hongtian/hongtianhoutai/hongtianhoutai.component';
+import {ShujuyuanComponent} from './page/shujuyuan/shujuyuan.component';
 
 @NgModule({
     declarations: [
-        AppComponent, DengluyeComponent, ZhuyeComponent, GerenzhongxinComponent
+        AppComponent, DengluyeComponent, ZhuyeComponent, GerenzhongxinComponent, HongtianhoutaiComponent, ShujuyuanComponent
     ],
     imports: [
         BrowserModule,
