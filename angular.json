@@ -92,7 +92,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "daimashengchengqianduan:build"
+            "browserTarget": "daimashengchengqianduan:build",
+            "proxyConfig": "proxy.config.json",
+            "host": "0.0.0.0"
           },
           "configurations": {
             "production": {
@@ -107,6 +109,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "daimashengchengqianduan"
 }

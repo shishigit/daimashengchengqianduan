@@ -1,0 +1,30 @@
+<div style="height: 100%;width:100%;background: url('assets/denglubeijing.png')">
+    <nz-card
+            style="width:300px;position: absolute;top: 20%;left: 20%"
+            [nzCover]="coverTemplate"
+            [nzActions]="[ actionEdit]"
+    >
+        <nz-card-meta
+                nzTitle="工艺参数优化"
+                nzDescription="工艺参数优化">
+        </nz-card-meta>
+        <div style="margin-top: 20px">
+            <nz-input-group nzAddOnBefore="帐号">
+                <input type="text" nz-input [(ngModel)]="dengluxinxi.zhanghao"/>
+            </nz-input-group>
+            <div style="height: 10px"></div>
+            <nz-input-group nzAddOnBefore="密码">
+                <input type="password" nz-input [(ngModel)]="dengluxinxi.mima"/>
+            </nz-input-group>
+        </div>
+    </nz-card>
+
+    <ng-template #coverTemplate>
+        <div style="width: 100%;margin: 20px">
+            <img alt="" src="assets/gongsilogo1.png" style="width: 87%;"/>
+        </div>
+    </ng-template>
+    <ng-template #actionEdit>
+        <button nz-button nzType="default" style="width: 85%" (click)="qingqiudenglu()">登录</button>
+    </ng-template>
+</div>
