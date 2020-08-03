@@ -30,6 +30,6 @@ export class DengluyeComponent implements OnInit
     qingqiudenglu()
     {
         this.httpService.xitong_denglu(this.dengluxinxi)
-            .subscribe(async () => await this.route.navigateByUrl('zhuye'))
+            .subscribe(async () => await this.route.navigateByUrl('zhuye/gerenzhongxin'))
     }
 }
