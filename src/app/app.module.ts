@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {DengluyeComponent} from "../page/dengluye/dengluye.component";
+import {DengluyeComponent} from "./page/dengluye/dengluye.component";
 import {
     NzButtonModule,
     NzCardModule,

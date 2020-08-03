@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {httpjiekou_xitong} from "../../qianhoutongyong/http.jiekou";
+import {httpjiekou_xitong} from "../../../qianhoutongyong/http.jiekou";
 import {Router} from "@angular/router";
-import {environment} from "../../environments/environment";
-import {HttpService} from "../../service/http.service";
+import {environment} from "../../../environments/environment";
+import {HttpService} from "../../../service/http.service";
 
 @Component({
     selector: 'app-dengluye',

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {DengluyeComponent} from "../page/dengluye/dengluye.component";
+import {DengluyeComponent} from "./page/dengluye/dengluye.component";
 
 const routes: Routes = [
     {
