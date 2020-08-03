@@ -3,14 +3,24 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import {DengluyeComponent} from "../page/dengluye/dengluye.component";
+import {NzButtonModule, NzCardModule, NzInputModule, NzNotificationServiceModule} from "ng-zorro-antd";
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent, DengluyeComponent
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NzCardModule,
+        NzInputModule,
+        NzNotificationServiceModule,
+        FormsModule,
+        NzButtonModule,
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
