@@ -13,10 +13,11 @@ import {
 } from "ng-zorro-antd";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {ZhuyeComponent} from './page/zhuye/zhuye.component';
 
 @NgModule({
     declarations: [
-        AppComponent, DengluyeComponent
+        AppComponent, DengluyeComponent, ZhuyeComponent
     ],
     imports: [
         BrowserModule,
