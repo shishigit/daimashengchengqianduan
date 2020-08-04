@@ -4,6 +4,7 @@ import {DengluyeComponent} from "./page/dengluye/dengluye.component";
 import {ZhuyeComponent} from "./page/zhuye/zhuye.component";
 import {GerenzhongxinComponent} from "./page/gerenzhongxin/gerenzhongxin.component";
 import {ShujuyuanComponent} from "./page/shujuyuan/shujuyuan.component";
+import {HongtianComponent} from "./page/hongtian/hongtian.component";
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
             {
                 path: 'shujuyuan',
                 component: ShujuyuanComponent
+            },
+            {
+                path: 'hongtian',
+                component: HongtianComponent
             }
         ]
     },

@@ -24,17 +24,18 @@ import {HttpClientModule} from "@angular/common/http";
 import {ZhuyeComponent} from './page/zhuye/zhuye.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {GerenzhongxinComponent} from './page/gerenzhongxin/gerenzhongxin.component';
-import {HongtianhoutaiComponent} from './page/hongtian/hongtianhoutai/hongtianhoutai.component';
 import {ShujuyuanComponent} from './page/shujuyuan/shujuyuan.component';
 import {ChoutiComponent} from './zujian/chouti/chouti.component';
 import {ShujukuleixingComponent} from './zujian/shujukuleixing/shujukuleixing.component';
+import {HongtianComponent} from './page/hongtian/hongtian.component';
 
 @NgModule({
     declarations: [
         AppComponent, DengluyeComponent, ZhuyeComponent,
-        GerenzhongxinComponent, HongtianhoutaiComponent, ShujuyuanComponent,
+        GerenzhongxinComponent, ShujuyuanComponent,
         ChoutiComponent,
-        ShujukuleixingComponent
+        ShujukuleixingComponent,
+        HongtianComponent
     ],
     imports: [
         BrowserModule,
