@@ -56,10 +56,7 @@
         <nz-form-item>
             <nz-form-label [nzSpan]="4">类型</nz-form-label>
             <nz-form-control [nzSpan]="24">
-                <nz-select [(ngModel)]="tianjiaxinxi.type" name="leixing">
-                    <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
-                    <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
-                </nz-select>
+                <app-shujukuleixing [(xuanquleixing)]="tianjiaxinxi.type"></app-shujukuleixing>
             </nz-form-control>
         </nz-form-item>
         <nz-form-item>

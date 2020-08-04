@@ -87,3 +87,16 @@ export namespace httpjiekou_shujuyuan
         }
     }
 }
+
+export namespace httpjiekou_zaxiang
+{
+    export namespace shujukuleixing
+    {
+        export interface Req
+        {
+
+        }
+
+        export type Res = string[]
+    }
+}

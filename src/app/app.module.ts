@@ -27,12 +27,14 @@ import {GerenzhongxinComponent} from './page/gerenzhongxin/gerenzhongxin.compone
 import {HongtianhoutaiComponent} from './page/hongtian/hongtianhoutai/hongtianhoutai.component';
 import {ShujuyuanComponent} from './page/shujuyuan/shujuyuan.component';
 import {ChoutiComponent} from './zujian/chouti/chouti.component';
+import {ShujukuleixingComponent} from './zujian/shujukuleixing/shujukuleixing.component';
 
 @NgModule({
     declarations: [
         AppComponent, DengluyeComponent, ZhuyeComponent,
         GerenzhongxinComponent, HongtianhoutaiComponent, ShujuyuanComponent,
-        ChoutiComponent
+        ChoutiComponent,
+        ShujukuleixingComponent
     ],
     imports: [
         BrowserModule,

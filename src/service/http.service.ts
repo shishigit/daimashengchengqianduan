@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {catchError} from "rxjs/operators";
-import {httpjiekou_shujuyuan, httpjiekou_xitong} from "../qianhoutongyong/http.jiekou";
+import {httpjiekou_shujuyuan, httpjiekou_xitong, httpjiekou_zaxiang} from "../qianhoutongyong/http.jiekou";
 import {HttpClient, HttpErrorResponse, HttpResponse} from "@angular/common/http";
 import {NzNotificationService} from "ng-zorro-antd";
 
@@ -104,5 +104,10 @@ export class HttpService
     shujuyuan_shanchu(param: httpjiekou_shujuyuan.shanchu.Req)
     {
         return this.postForJson<httpjiekou_shujuyuan.shanchu.Res>('/shujuyuan/shanchu', param)
+    }
+
+    zaxiang_shujukuleixing(param: httpjiekou_zaxiang.shujukuleixing.Req)
+    {
+        return this.postForJson<httpjiekou_zaxiang.shujukuleixing.Res>('/zaxiang/shujukuleixing', param)
     }
 }
