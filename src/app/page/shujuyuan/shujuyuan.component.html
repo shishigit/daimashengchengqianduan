@@ -1,15 +1,12 @@
 <!-- 查询 -->
 <div style="margin-bottom: 20px;text-align: right">
-
     名称:&nbsp;&nbsp;
     <input style="width: 200px;margin-right: 20px" nz-input
            [(ngModel)]="chaxunxinxi.mingcheng"/>
-
     <nz-button-group>
         <button nz-button (click)="huoqushuju()">查询</button>
         <button nz-button (click)="tiandiandianji()">添加</button>
     </nz-button-group>
-
 </div>
 
 <!-- 表格 -->
@@ -71,7 +68,11 @@
         <nz-form-item>
             <nz-form-label [nzSpan]="4">端口</nz-form-label>
             <nz-form-control [nzSpan]="24">
-                <input name="duankou" nz-input [(ngModel)]="tianjiaxinxi.port">
+                <nz-input-number name="duankou"
+                                 [(ngModel)]="tianjiaxinxi.port"
+                                 [nzMin]="1"
+                                 [nzStep]="1">
+                </nz-input-number>
             </nz-form-control>
         </nz-form-item>
         <nz-form-item>
