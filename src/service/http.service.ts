@@ -95,4 +95,14 @@ export class HttpService
     {
         return this.postForJson<httpjiekou_shujuyuan.chaxun.Res[]>('/shujuyuan/chaxun', param)
     }
+
+    shujuyuan_tianjia(param: httpjiekou_shujuyuan.tianjia.Req)
+    {
+        return this.postForJson<httpjiekou_shujuyuan.tianjia.Res>('/shujuyuan/tianjia', param)
+    }
+
+    shujuyuan_shanchu(param: httpjiekou_shujuyuan.shanchu.Req)
+    {
+        return this.postForJson<httpjiekou_shujuyuan.shanchu.Res>('/shujuyuan/shanchu', param)
+    }
 }

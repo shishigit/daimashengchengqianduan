@@ -9,7 +9,9 @@ import {
     NzCardModule,
     NzDividerModule,
     NzDrawerModule,
+    NzFormModule,
     NzInputModule,
+    NzInputNumberModule,
     NzLayoutModule,
     NzMenuModule,
     NzNotificationModule,
@@ -46,7 +48,9 @@ import {ChoutiComponent} from './zujian/chouti/chouti.component';
         BrowserAnimationsModule,
         NzDrawerModule,
         NzTableModule,
-        NzDividerModule
+        NzDividerModule,
+        NzFormModule,
+        NzInputNumberModule
     ],
     providers: [],
     bootstrap: [AppComponent]

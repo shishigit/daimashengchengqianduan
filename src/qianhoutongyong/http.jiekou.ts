@@ -56,4 +56,34 @@ export namespace httpjiekou_shujuyuan
             database: string
         }
     }
+
+    export namespace tianjia
+    {
+        export interface Req
+        {
+            mingcheng: string
+            type: string
+            host: string
+            port: number
+            username: string
+            password: string
+            database: string
+        }
+
+        export interface Res
+        {
+        }
+    }
+    export namespace shanchu
+    {
+        export interface Req
+        {
+            id: number
+        }
+
+        export interface Res
+        {
+
+        }
+    }
 }

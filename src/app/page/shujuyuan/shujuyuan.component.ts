@@ -2,6 +2,17 @@ import {Component, OnInit} from '@angular/core';
 import {HttpService} from "../../../service/http.service";
 import {httpjiekou_shujuyuan} from "../../../qianhoutongyong/http.jiekou";
 
+const yuanshitianjiaxinxi = {
+    mingcheng: '',
+    type: '',
+    host: '',
+    port: 0,
+    username: '',
+    password: '',
+    database: '',
+}
+
+
 @Component({
     selector: 'app-shujuyuan',
     templateUrl: './shujuyuan.component.html',
@@ -14,6 +25,7 @@ export class ShujuyuanComponent implements OnInit
     chaxunxinxi = {
         mingcheng: ''
     };
+    tianjiaxinxi = {...yuanshitianjiaxinxi};
 
     constructor(
         private httpService: HttpService
@@ -38,5 +50,31 @@ export class ShujuyuanComponent implements OnInit
     tiandiandianji()
     {
         this.xianshitianjia = true
+    }
+
+    quedingtianjia()
+    {
+        this.httpService.shujuyuan_tianjia(this.tianjiaxinxi)
+            .subscribe(() =>
+            {
+                this.xianshitianjia = false
+                this.tianjiaxinxi = {...yuanshitianjiaxinxi}
+                this.huoqushuju()
+            })
+    }
+
+    quxiaotianjia()
+    {
+        this.xianshitianjia = false
+        this.tianjiaxinxi = {...yuanshitianjiaxinxi}
+    }
+
+    shangchu(id: number)
+    {
+        this.httpService.shujuyuan_shanchu({id})
+            .subscribe(() =>
+            {
+                this.huoqushuju()
+            })
     }
 }

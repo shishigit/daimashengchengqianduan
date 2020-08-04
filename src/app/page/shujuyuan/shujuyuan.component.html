@@ -6,7 +6,7 @@
            [(ngModel)]="chaxunxinxi.mingcheng"/>
 
     <nz-button-group>
-        <button nz-button>查询</button>
+        <button nz-button (click)="huoqushuju()">查询</button>
         <button nz-button (click)="tiandiandianji()">添加</button>
     </nz-button-group>
 
@@ -23,7 +23,7 @@
         <th>数据库</th>
         <th>帐号</th>
         <th>密码</th>
-        <th>Action</th>
+        <th>操作</th>
     </tr>
     </thead>
     <tbody>
@@ -36,9 +36,7 @@
         <td>{{ data.username }}</td>
         <td>{{ data.password }}</td>
         <td>
-            <a>删除</a>
-            <nz-divider nzType="vertical"></nz-divider>
-            <a>Delete</a>
+            <a (click)="shangchu(data.id)">删除</a>
         </td>
     </tr>
     </tbody>
@@ -47,6 +45,52 @@
 <!-- 添加 -->
 <app-chouti
         [xianshiyufou]="xianshitianjia"
+        (quedingdianji)="quedingtianjia()"
+        (quxiaodianji)="quxiaotianjia()"
+        biaoti="数据源"
 >
-    2222222222222222
+    <form nz-form>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">名称</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="mingcheng" nz-input [(ngModel)]="tianjiaxinxi.mingcheng">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">类型</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="leixing" nz-input [(ngModel)]="tianjiaxinxi.type">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">IP</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="ip" nz-input [(ngModel)]="tianjiaxinxi.host">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">端口</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="duankou" nz-input [(ngModel)]="tianjiaxinxi.port">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">帐号</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="zhanghao" nz-input [(ngModel)]="tianjiaxinxi.username">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">密码</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="mima" nz-input [(ngModel)]="tianjiaxinxi.password">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">数据库</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="shujuku" nz-input [(ngModel)]="tianjiaxinxi.database">
+            </nz-form-control>
+        </nz-form-item>
+    </form>
 </app-chouti>
