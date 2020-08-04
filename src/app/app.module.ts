@@ -16,6 +16,7 @@ import {
     NzMenuModule,
     NzNotificationModule,
     NzNotificationServiceModule,
+    NzSelectModule,
     NzTableModule
 } from "ng-zorro-antd";
 import {FormsModule} from "@angular/forms";
@@ -50,7 +51,8 @@ import {ChoutiComponent} from './zujian/chouti/chouti.component';
         NzTableModule,
         NzDividerModule,
         NzFormModule,
-        NzInputNumberModule
+        NzInputNumberModule,
+        NzSelectModule
     ],
     providers: [],
     bootstrap: [AppComponent]
