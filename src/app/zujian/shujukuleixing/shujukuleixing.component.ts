@@ -9,7 +9,7 @@ import {HttpService} from "../../../service/http.service";
 export class ShujukuleixingComponent implements OnInit
 {
     @Input() xuanquleixing: string = '';
-    @Output() xuanquleixingChange = new EventEmitter()
+    @Output() xuanquleixingChange = new EventEmitter<string>()
 
     leixingliebiao: string[] = [];
 
@@ -25,9 +25,11 @@ export class ShujukuleixingComponent implements OnInit
     huoqushuju()
     {
         this.httpService.zaxiang_shujukuleixing({})
-            .subscribe(value =>
-            {
-                this.leixingliebiao = value
-            })
+            .subscribe(value => this.leixingliebiao = value)
+    }
+
+    change(data: string)
+    {
+        this.xuanquleixingChange.emit(data)
     }
 }
