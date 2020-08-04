@@ -7,12 +7,14 @@ import {DengluyeComponent} from "./page/dengluye/dengluye.component";
 import {
     NzButtonModule,
     NzCardModule,
+    NzDividerModule,
     NzDrawerModule,
     NzInputModule,
     NzLayoutModule,
     NzMenuModule,
     NzNotificationModule,
-    NzNotificationServiceModule
+    NzNotificationServiceModule,
+    NzTableModule
 } from "ng-zorro-antd";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
@@ -25,7 +27,9 @@ import {ChoutiComponent} from './zujian/chouti/chouti.component';
 
 @NgModule({
     declarations: [
-        AppComponent, DengluyeComponent, ZhuyeComponent, GerenzhongxinComponent, HongtianhoutaiComponent, ShujuyuanComponent, ChoutiComponent
+        AppComponent, DengluyeComponent, ZhuyeComponent,
+        GerenzhongxinComponent, HongtianhoutaiComponent, ShujuyuanComponent,
+        ChoutiComponent
     ],
     imports: [
         BrowserModule,
@@ -40,7 +44,9 @@ import {ChoutiComponent} from './zujian/chouti/chouti.component';
         NzLayoutModule,
         NzMenuModule,
         BrowserAnimationsModule,
-        NzDrawerModule
+        NzDrawerModule,
+        NzTableModule,
+        NzDividerModule
     ],
     providers: [],
     bootstrap: [AppComponent]
