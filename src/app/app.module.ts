@@ -7,6 +7,7 @@ import {DengluyeComponent} from "./page/dengluye/dengluye.component";
 import {
     NzButtonModule,
     NzCardModule,
+    NzDrawerModule,
     NzInputModule,
     NzLayoutModule,
     NzMenuModule,
@@ -20,10 +21,11 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {GerenzhongxinComponent} from './page/gerenzhongxin/gerenzhongxin.component';
 import {HongtianhoutaiComponent} from './page/hongtian/hongtianhoutai/hongtianhoutai.component';
 import {ShujuyuanComponent} from './page/shujuyuan/shujuyuan.component';
+import {ChoutiComponent} from './zujian/chouti/chouti.component';
 
 @NgModule({
     declarations: [
-        AppComponent, DengluyeComponent, ZhuyeComponent, GerenzhongxinComponent, HongtianhoutaiComponent, ShujuyuanComponent
+        AppComponent, DengluyeComponent, ZhuyeComponent, GerenzhongxinComponent, HongtianhoutaiComponent, ShujuyuanComponent, ChoutiComponent
     ],
     imports: [
         BrowserModule,
@@ -37,7 +39,8 @@ import {ShujuyuanComponent} from './page/shujuyuan/shujuyuan.component';
         NzNotificationModule,
         NzLayoutModule,
         NzMenuModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        NzDrawerModule
     ],
     providers: [],
     bootstrap: [AppComponent]
