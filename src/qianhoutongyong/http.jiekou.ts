@@ -150,6 +150,7 @@ export namespace httpjiekou_hongtian
 
         export interface Res
         {
+            id: number
             mingcheng: string
             beizhu: string
             shujukumingcheng: string

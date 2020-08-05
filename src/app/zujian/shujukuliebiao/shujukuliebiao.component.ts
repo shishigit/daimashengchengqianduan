@@ -10,7 +10,7 @@ import {httpjiekou_shujuyuan} from "../../../qianhoutongyong/http.jiekou";
 export class ShujukuliebiaoComponent implements OnInit
 {
     @Input() xuanqushujuku: number = 0;
-    @Output() xuanqushujukuChange = new EventEmitter<string>()
+    @Output() xuanqushujukuChange = new EventEmitter<number>()
 
     shujuyuan_list: httpjiekou_shujuyuan.xialacaidan.Res[] = [];
 
@@ -31,7 +31,7 @@ export class ShujukuliebiaoComponent implements OnInit
             .subscribe(value => this.shujuyuan_list = value)
     }
 
-    change(data: string)
+    change(data: number)
     {
         this.xuanqushujukuChange.emit(data)
     }
