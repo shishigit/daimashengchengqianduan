@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpService} from "../../../service/http.service";
-import {httpjiekou_hongtian} from "../../../qianhoutongyong/http.jiekou";
+import {HttpService} from "../../../../service/http.service";
+import {httpjiekou_hongtian} from "../../../../qianhoutongyong/http.jiekou";
+import {HongtianService} from "../hongtian.service";
+import {Router} from "@angular/router";
 
 const tianjia_yuanshishuju = {
     mingcheng: '',
@@ -9,11 +11,11 @@ const tianjia_yuanshishuju = {
 }
 
 @Component({
-    selector: 'app-hongtian',
-    templateUrl: './hongtian.component.html',
-    styleUrls: ['./hongtian.component.css']
+    selector: 'app-hongtianliebiao',
+    templateUrl: './hongtianliebiao.component.html',
+    styleUrls: ['./hongtianliebiao.component.css']
 })
-export class HongtianComponent implements OnInit
+export class HongtianliebiaoComponent implements OnInit
 {
     xiangmu_list: httpjiekou_hongtian.chaxun.Res[] = [];
     chaxunxinxi = {
@@ -23,7 +25,9 @@ export class HongtianComponent implements OnInit
     tianjiaxinxi = {...tianjia_yuanshishuju};
 
     constructor(
-        private httpService: HttpService
+        private httpService: HttpService,
+        private hongtianService: HongtianService,
+        private route: Router
     )
     {
     }
@@ -69,5 +73,11 @@ export class HongtianComponent implements OnInit
             {
                 this.huoqushuju()
             })
+    }
+
+    shengchengdaima(id: number)
+    {
+        this.hongtianService.daimashengchengid = id
+        this.route.navigateByUrl('zhuye/hongtiandaima')
     }
 }

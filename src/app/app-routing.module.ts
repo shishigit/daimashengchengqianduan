@@ -4,7 +4,8 @@ import {DengluyeComponent} from "./page/dengluye/dengluye.component";
 import {ZhuyeComponent} from "./page/zhuye/zhuye.component";
 import {GerenzhongxinComponent} from "./page/gerenzhongxin/gerenzhongxin.component";
 import {ShujuyuanComponent} from "./page/shujuyuan/shujuyuan.component";
-import {HongtianComponent} from "./page/hongtian/hongtian.component";
+import {HongtianliebiaoComponent} from "./page/hongtian/xiangmuliebiao/hongtianliebiao.component";
+import {HongtiandaimaComponent} from "./page/hongtian/hongtiandaima/hongtiandaima.component";
 
 const routes: Routes = [
     {
@@ -30,7 +31,11 @@ const routes: Routes = [
             },
             {
                 path: 'hongtian',
-                component: HongtianComponent
+                component: HongtianliebiaoComponent
+            },
+            {
+                path: 'hongtiandaima',
+                component: HongtiandaimaComponent
             }
         ]
     },

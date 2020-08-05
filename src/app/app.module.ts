@@ -27,8 +27,9 @@ import {GerenzhongxinComponent} from './page/gerenzhongxin/gerenzhongxin.compone
 import {ShujuyuanComponent} from './page/shujuyuan/shujuyuan.component';
 import {ChoutiComponent} from './zujian/chouti/chouti.component';
 import {ShujukuleixingComponent} from './zujian/shujukuleixing/shujukuleixing.component';
-import {HongtianComponent} from './page/hongtian/hongtian.component';
+import {HongtianliebiaoComponent} from './page/hongtian/xiangmuliebiao/hongtianliebiao.component';
 import {ShujukuliebiaoComponent} from './zujian/shujukuliebiao/shujukuliebiao.component';
+import {HongtiandaimaComponent} from './page/hongtian/hongtiandaima/hongtiandaima.component';
 
 @NgModule({
     declarations: [
@@ -36,8 +37,9 @@ import {ShujukuliebiaoComponent} from './zujian/shujukuliebiao/shujukuliebiao.co
         GerenzhongxinComponent, ShujuyuanComponent,
         ChoutiComponent,
         ShujukuleixingComponent,
-        HongtianComponent,
-        ShujukuliebiaoComponent
+        HongtianliebiaoComponent,
+        ShujukuliebiaoComponent,
+        HongtiandaimaComponent
     ],
     imports: [
         BrowserModule,
