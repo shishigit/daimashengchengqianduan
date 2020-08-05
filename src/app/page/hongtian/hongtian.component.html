@@ -42,23 +42,25 @@
 >
     <form nz-form>
         <nz-form-item>
-            <nz-form-label [nzSpan]="4">名称</nz-form-label>
+            <nz-form-label [nzSpan]="6">名称</nz-form-label>
             <nz-form-control [nzSpan]="24">
                 <input name="mingcheng" nz-input [(ngModel)]="tianjiaxinxi.mingcheng">
             </nz-form-control>
         </nz-form-item>
         <nz-form-item>
-            <nz-form-label [nzSpan]="4">备注</nz-form-label>
-            <nz-form-control [nzSpan]="24">
-                <input name="beizhu" nz-input [(ngModel)]="tianjiaxinxi.beizhu">
-            </nz-form-control>
-        </nz-form-item>
-        <nz-form-item>
-            <nz-form-label [nzSpan]="4">类型</nz-form-label>
+            <nz-form-label [nzSpan]="6">数据库</nz-form-label>
             <nz-form-control [nzSpan]="24">
                 <app-shujukuleixing [(xuanquleixing)]="tianjiaxinxi.type"></app-shujukuleixing>
             </nz-form-control>
         </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">备注</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <textarea nz-input name="beizhu" [(ngModel)]="tianjiaxinxi.beizhu"></textarea>
+            </nz-form-control>
+        </nz-form-item>
+
     </form>
 </app-chouti>
 

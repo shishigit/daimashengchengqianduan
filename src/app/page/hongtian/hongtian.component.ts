@@ -48,10 +48,13 @@ export class HongtianComponent implements OnInit
     quedingtianjia()
     {
         // TODO
+        // this.httpService.hongtian_tianjia(this.tianjiaxinxi)
+        //     .subscribe(value => this.xiangmu_list = value)
     }
 
     quxiaotianjia()
     {
-        // TODO
+        this.xianshitianjia = false
+        this.tianjiaxinxi = {...tianjia_yuanshishuju}
     }
 }
