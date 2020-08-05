@@ -9,7 +9,7 @@ import {httpjiekou_shujuyuan} from "../../../qianhoutongyong/http.jiekou";
 })
 export class ShujukuliebiaoComponent implements OnInit
 {
-    @Input() xuanqushujuku: string = '';
+    @Input() xuanqushujuku: number = 0;
     @Output() xuanqushujukuChange = new EventEmitter<string>()
 
     shujuyuan_list: httpjiekou_shujuyuan.xialacaidan.Res[] = [];

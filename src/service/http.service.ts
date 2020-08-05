@@ -126,4 +126,8 @@ export class HttpService
         return this.postForJson<httpjiekou_hongtian.chaxun.Res[]>('/hongtian/chaxun', param)
     }
 
+    hongtian_tianjia(param: httpjiekou_hongtian.tianjia.Req)
+    {
+        return this.postForJson<httpjiekou_hongtian.tianjia.Res>('/hongtian/tianjia', param)
+    }
 }

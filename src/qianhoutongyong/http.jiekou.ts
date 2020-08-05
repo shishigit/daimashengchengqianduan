@@ -115,6 +115,20 @@ export namespace httpjiekou_zaxiang
 
 export namespace httpjiekou_hongtian
 {
+    export namespace tianjia
+    {
+        export interface Res
+        {
+
+        }
+
+        export interface Req
+        {
+            mingcheng: string;
+            beizhu: string;
+            type: number
+        }
+    }
     export namespace chaxun
     {
         export interface Req

@@ -5,7 +5,7 @@ import {httpjiekou_hongtian} from "../../../qianhoutongyong/http.jiekou";
 const tianjia_yuanshishuju = {
     mingcheng: '',
     beizhu: '',
-    type: ''
+    type: 0
 }
 
 @Component({
@@ -47,9 +47,14 @@ export class HongtianComponent implements OnInit
 
     quedingtianjia()
     {
-        // TODO
-        // this.httpService.hongtian_tianjia(this.tianjiaxinxi)
-        //     .subscribe(value => this.xiangmu_list = value)
+
+        this.httpService.hongtian_tianjia(this.tianjiaxinxi)
+            .subscribe(value =>
+            {
+                this.xianshitianjia = false
+                this.tianjiaxinxi = {...tianjia_yuanshishuju}
+                this.huoqushuju()
+            })
     }
 
     quxiaotianjia()
