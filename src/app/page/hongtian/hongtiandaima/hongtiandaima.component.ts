@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {HttpService} from "../../../../service/http.service";
 
 @Component({
     selector: 'app-hongtiandaima',
@@ -10,7 +11,8 @@ export class HongtiandaimaComponent implements OnInit
 {
 
     constructor(
-        private route: Router
+        private route: Router,
+        private httpService: HttpService
     )
     {
     }
@@ -19,8 +21,11 @@ export class HongtiandaimaComponent implements OnInit
     {
     }
 
+
     async fanhuiliebiao()
     {
         await this.route.navigateByUrl('zhuye/hongtian/liebiao')
     }
+
+
 }

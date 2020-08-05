@@ -5,9 +5,9 @@
 <nz-divider></nz-divider>
 <form nz-form style="width: 33%;">
     <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
-        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
-            <input nz-input id="email"/>
+        <nz-form-label nzFor="email">库表</nz-form-label>
+        <nz-form-control>
+            <app-shujukutable></app-shujukutable>
         </nz-form-control>
     </nz-form-item>
 </form>
