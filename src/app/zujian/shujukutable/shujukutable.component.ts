@@ -9,8 +9,9 @@ import {HttpService} from "../../../service/http.service";
 })
 export class ShujukutableComponent implements OnInit
 {
-    @Input() xuanqushujuku: number = 0;
-    @Output() xuanqushujukuChange = new EventEmitter<number>()
+    @Input() shujukuid: number = 0;
+    @Input() xuanqubiao: number = 0;
+    @Output() xuanqubiaoChange = new EventEmitter<number>()
 
     shujuyuan_list: httpjiekou_shujuyuan.xialacaidan.Res[] = [];
 
@@ -27,13 +28,17 @@ export class ShujukutableComponent implements OnInit
 
     huoqushuju()
     {
-        this.httpService.shujuyuan_xialacaidan({})
-            .subscribe(value => this.shujuyuan_list = value)
+        this.httpService.shujuyuan_table({shujukuid: this.shujukuid})
+            .subscribe(value =>
+            {
+                // this.shujuyuan_list = value
+                // TODO
+
+            })
     }
 
     change(data: number)
     {
-        this.xuanqushujukuChange.emit(data)
+        this.xuanqubiaoChange.emit(data)
     }
-
 }

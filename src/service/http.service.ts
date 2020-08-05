@@ -106,6 +106,11 @@ export class HttpService
         return this.postForJson<httpjiekou_shujuyuan.tianjia.Res>('/shujuyuan/tianjia', param)
     }
 
+    shujuyuan_table(param: httpjiekou_shujuyuan.table.Req)
+    {
+        return this.postForJson<httpjiekou_shujuyuan.table.Res>('/shujuyuan/table', param)
+    }
+
     shujuyuan_shanchu(param: httpjiekou_shujuyuan.shanchu.Req)
     {
         return this.postForJson<httpjiekou_shujuyuan.shanchu.Res>('/shujuyuan/shanchu', param)
@@ -135,4 +140,5 @@ export class HttpService
     {
         return this.postForJson<httpjiekou_hongtian.shanchu.Res>('/hongtian/shanchu', param)
     }
+
 }
