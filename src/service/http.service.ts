@@ -111,6 +111,11 @@ export class HttpService
         return this.postForJson<httpjiekou_shujuyuan.shanchu.Res>('/shujuyuan/shanchu', param)
     }
 
+    shujuyuan_xialacaidan(param: httpjiekou_shujuyuan.xialacaidan.Req)
+    {
+        return this.postForJson<httpjiekou_shujuyuan.xialacaidan.Res[]>('/shujuyuan/xialacaidan', param)
+    }
+
     zaxiang_shujukuleixing(param: httpjiekou_zaxiang.shujukuleixing.Req)
     {
         return this.postForJson<httpjiekou_zaxiang.shujukuleixing.Res>('/zaxiang/shujukuleixing', param)
@@ -120,4 +125,5 @@ export class HttpService
     {
         return this.postForJson<httpjiekou_hongtian.chaxun.Res[]>('/hongtian/chaxun', param)
     }
+
 }
