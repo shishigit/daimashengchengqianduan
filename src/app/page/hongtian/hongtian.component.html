@@ -25,9 +25,7 @@
         <td>{{ data.shujukumingcheng }}</td>
         <td>{{ data.beizhu}}</td>
         <td>
-            <a>删除 </a>
-            <nz-divider nzType="vertical"></nz-divider>
-            <a>Delete</a>
+            <a (click)="shangchu(data.id)">删除</a>
         </td>
     </tr>
     </tbody>

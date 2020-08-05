@@ -115,6 +115,18 @@ export namespace httpjiekou_zaxiang
 
 export namespace httpjiekou_hongtian
 {
+    export namespace shanchu
+    {
+        export interface Res
+        {
+
+        }
+
+        export interface Req
+        {
+            id: number
+        }
+    }
     export namespace tianjia
     {
         export interface Res
@@ -126,7 +138,7 @@ export namespace httpjiekou_hongtian
         {
             mingcheng: string;
             beizhu: string;
-            type: number
+            shujukuid: number
         }
     }
     export namespace chaxun
