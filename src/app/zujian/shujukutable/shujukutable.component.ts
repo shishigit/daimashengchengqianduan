@@ -10,10 +10,10 @@ import {HttpService} from "../../../service/http.service";
 export class ShujukutableComponent implements OnInit
 {
     @Input() shujukuid: number = 0;
-    @Input() xuanqubiao: number = 0;
-    @Output() xuanqubiaoChange = new EventEmitter<number>()
+    @Input() xuanqubiao: string = '';
+    @Output() xuanqubiaoChange = new EventEmitter<string>()
 
-    shujuyuan_list: httpjiekou_shujuyuan.xialacaidan.Res[] = [];
+    shujuyuan_list: httpjiekou_shujuyuan.table.Res = [];
 
     constructor(
         private httpService: HttpService
@@ -31,13 +31,11 @@ export class ShujukutableComponent implements OnInit
         this.httpService.shujuyuan_table({shujukuid: this.shujukuid})
             .subscribe(value =>
             {
-                // this.shujuyuan_list = value
-                // TODO
-
+                this.shujuyuan_list = value
             })
     }
 
-    change(data: number)
+    change(data: string)
     {
         this.xuanqubiaoChange.emit(data)
     }

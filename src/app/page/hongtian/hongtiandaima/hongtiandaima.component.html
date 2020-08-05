@@ -7,7 +7,8 @@
     <nz-form-item>
         <nz-form-label nzFor="email">库表</nz-form-label>
         <nz-form-control>
-            <app-shujukutable></app-shujukutable>
+            <app-shujukutable [shujukuid]="hongtianService.daimashengchengid"
+                              [(xuanqubiao)]="shengchengxinxi.kubiao"></app-shujukutable>
         </nz-form-control>
     </nz-form-item>
 </form>

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpService} from "../../../../service/http.service";
+import {HongtianService} from "../hongtian.service";
 
 @Component({
     selector: 'app-hongtiandaima',
@@ -9,10 +10,15 @@ import {HttpService} from "../../../../service/http.service";
 })
 export class HongtiandaimaComponent implements OnInit
 {
+    private shengchengxinxi = {
+        shujukuid: 0,
+        kubiao: ''
+    }
 
     constructor(
         private route: Router,
-        private httpService: HttpService
+        private httpService: HttpService,
+        private hongtianService: HongtianService
     )
     {
     }

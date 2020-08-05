@@ -1,3 +1,3 @@
-<nz-select [(ngModel)]="xuanqushujuku" (ngModelChange)="change($event)">
-    <nz-option *ngFor="let it of shujuyuan_list" [nzValue]="it.id" [nzLabel]="it.mingcheng"></nz-option>
+<nz-select [(ngModel)]="xuanqubiao" (ngModelChange)="change($event)">
+    <nz-option *ngFor="let it of shujuyuan_list" [nzValue]="it" [nzLabel]="it"></nz-option>
 </nz-select>
