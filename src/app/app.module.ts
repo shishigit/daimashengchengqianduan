@@ -17,7 +17,8 @@ import {
     NzNotificationModule,
     NzNotificationServiceModule,
     NzSelectModule,
-    NzTableModule
+    NzTableModule,
+    NzTypographyModule
 } from "ng-zorro-antd";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
@@ -59,7 +60,8 @@ import {HongtiandaimaComponent} from './page/hongtian/hongtiandaima/hongtiandaim
         NzDividerModule,
         NzFormModule,
         NzInputNumberModule,
-        NzSelectModule
+        NzSelectModule,
+        NzTypographyModule
     ],
     providers: [],
     bootstrap: [AppComponent]
