@@ -1,1 +1,65 @@
-<p>hongtian works!</p>
+<!-- 查询 -->
+<div style="margin-bottom: 20px;text-align: right">
+    名称:&nbsp;&nbsp;
+    <input style="width: 200px;margin-right: 20px" nz-input
+           [(ngModel)]="chaxunxinxi.mingcheng"/>
+    <nz-button-group>
+        <button nz-button (click)="huoqushuju()">查询</button>
+        <button nz-button (click)="tianjiandianji()">添加</button>
+    </nz-button-group>
+</div>
+
+<!-- 表格 -->
+<nz-table #basicTable [nzData]="xiangmu_list">
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>数据库</th>
+        <th>备注</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.mingcheng }}</td>
+        <td>{{ data.shujukumingcheng }}</td>
+        <td>{{ data.beizhu}}</td>
+        <td>
+            <a>删除 </a>
+            <nz-divider nzType="vertical"></nz-divider>
+            <a>Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</nz-table>
+
+<!-- 添加 -->
+<app-chouti
+        [xianshiyufou]="xianshitianjia"
+        (quedingdianji)="quedingtianjia()"
+        (quxiaodianji)="quxiaotianjia()"
+        biaoti="数据源"
+>
+    <form nz-form>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">名称</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="mingcheng" nz-input [(ngModel)]="tianjiaxinxi.mingcheng">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">备注</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <input name="beizhu" nz-input [(ngModel)]="tianjiaxinxi.beizhu">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="4">类型</nz-form-label>
+            <nz-form-control [nzSpan]="24">
+                <app-shujukuleixing [(xuanquleixing)]="tianjiaxinxi.type"></app-shujukuleixing>
+            </nz-form-control>
+        </nz-form-item>
+    </form>
+</app-chouti>
+
+

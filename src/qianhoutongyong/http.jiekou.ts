@@ -1,5 +1,3 @@
-import {shujukuleixing_type} from "./shujujiegou";
-
 export namespace httpjiekou_xitong
 {
     export namespace denglu
@@ -64,7 +62,7 @@ export namespace httpjiekou_shujuyuan
         export interface Req
         {
             mingcheng: string
-            type: shujukuleixing_type
+            type: string
             host: string
             port: number
             username: string
@@ -100,5 +98,23 @@ export namespace httpjiekou_zaxiang
         }
 
         export type Res = string[]
+    }
+}
+
+export namespace httpjiekou_hongtian
+{
+    export namespace chaxun
+    {
+        export interface Req
+        {
+            mingcheng: string
+        }
+
+        export interface Res
+        {
+            mingcheng: string
+            beizhu: string
+            shujukumingcheng: string
+        }
     }
 }

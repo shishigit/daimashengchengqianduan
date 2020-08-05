@@ -4,7 +4,7 @@ import {httpjiekou_shujuyuan} from "../../../qianhoutongyong/http.jiekou";
 
 const yuanshitianjiaxinxi = {
     mingcheng: '',
-    type: '',
+    type: 'mysql',
     host: '',
     port: 0,
     username: '',
