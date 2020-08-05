@@ -163,6 +163,7 @@ export namespace httpjiekou_hongtian
             mingcheng: string
             beizhu: string
             shujukumingcheng: string
+            shujukuid: number
         }
     }
 }
