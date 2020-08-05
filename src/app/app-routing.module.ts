@@ -31,10 +31,15 @@ const routes: Routes = [
             },
             {
                 path: 'hongtian',
+                redirectTo: 'hongtian/liebiao',
+                pathMatch: 'full'
+            },
+            {
+                path: 'hongtian/liebiao',
                 component: HongtianliebiaoComponent
             },
             {
-                path: 'hongtiandaima',
+                path: 'hongtian/daima',
                 component: HongtiandaimaComponent
             }
         ]

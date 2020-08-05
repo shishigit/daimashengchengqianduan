@@ -75,9 +75,9 @@ export class HongtianliebiaoComponent implements OnInit
             })
     }
 
-    shengchengdaima(id: number)
+    async shengchengdaima(id: number)
     {
         this.hongtianService.daimashengchengid = id
-        this.route.navigateByUrl('zhuye/hongtiandaima')
+        await this.route.navigateByUrl('zhuye/hongtian/daima')
     }
 }
