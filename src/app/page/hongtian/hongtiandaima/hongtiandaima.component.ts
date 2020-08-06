@@ -10,7 +10,7 @@ import {HongtianService} from "../hongtian.service";
 })
 export class HongtiandaimaComponent implements OnInit
 {
-    private shengchengxinxi = {
+    shengchengxinxi = {
         shujukuid: 0,
         kubiao: ''
     }
@@ -18,7 +18,7 @@ export class HongtiandaimaComponent implements OnInit
     constructor(
         private route: Router,
         private httpService: HttpService,
-        private hongtianService: HongtianService
+        readonly hongtianService: HongtianService
     )
     {
     }
