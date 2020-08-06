@@ -34,8 +34,12 @@ export class HongtiandaimaComponent implements OnInit
     async fanhuiliebiao()
     {
         await this.route.navigateByUrl('zhuye/hongtian/liebiao')
-        this.shengchengxinxi == {...yuanshi_shengchengxinxi}
+        this.shengchengxinxi = {...yuanshi_shengchengxinxi}
     }
 
 
+    shengchengdaima()
+    {
+        this.httpService.hongtian_shengchengdaima(this.shengchengxinxi)
+    }
 }

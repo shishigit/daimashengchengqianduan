@@ -141,4 +141,8 @@ export class HttpService
         return this.postForJson<httpjiekou_hongtian.shanchu.Res>('/hongtian/shanchu', param)
     }
 
+    hongtian_shengchengdaima(shengchengxinxi: httpjiekou_hongtian.shengchengdaima.req)
+    {
+        return this.postForFile('/hongtian/shengchengdaima', shengchengxinxi)
+    }
 }
