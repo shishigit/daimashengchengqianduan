@@ -3,6 +3,12 @@ import {Router} from "@angular/router";
 import {HttpService} from "../../../../service/http.service";
 import {HongtianService} from "../hongtian.service";
 
+const yuanshi_shengchengxinxi = {
+    shujukuid: 0,
+    kubiao: '',
+    baoming: ''
+}
+
 @Component({
     selector: 'app-hongtiandaima',
     templateUrl: './hongtiandaima.component.html',
@@ -10,10 +16,7 @@ import {HongtianService} from "../hongtian.service";
 })
 export class HongtiandaimaComponent implements OnInit
 {
-    shengchengxinxi = {
-        shujukuid: 0,
-        kubiao: ''
-    }
+    shengchengxinxi = {...yuanshi_shengchengxinxi}
 
     constructor(
         private route: Router,
@@ -31,6 +34,7 @@ export class HongtiandaimaComponent implements OnInit
     async fanhuiliebiao()
     {
         await this.route.navigateByUrl('zhuye/hongtian/liebiao')
+        this.shengchengxinxi == {...yuanshi_shengchengxinxi}
     }
 
 
