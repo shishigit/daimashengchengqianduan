@@ -77,7 +77,7 @@ export class HongtianliebiaoComponent implements OnInit
 
     async shengchengdaima(shujukuid: number)
     {
-        this.hongtianService.daimashengchengid = shujukuid
+        this.hongtianService.daimashengcheng_shujukuid = shujukuid
         await this.route.navigateByUrl('zhuye/hongtian/daima')
     }
 }

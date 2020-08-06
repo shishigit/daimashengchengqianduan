@@ -10,5 +10,5 @@ export class HongtianService
     {
     }
 
-    daimashengchengid: number = 0
+    daimashengcheng_shujukuid: number = 0
 }

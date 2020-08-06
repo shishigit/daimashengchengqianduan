@@ -40,6 +40,7 @@ export class HongtiandaimaComponent implements OnInit
 
     shengchengdaima()
     {
+        this.shengchengxinxi.shujukuid = this.hongtianService.daimashengcheng_shujukuid
         this.httpService.hongtian_shengchengdaima(this.shengchengxinxi)
     }
 }
