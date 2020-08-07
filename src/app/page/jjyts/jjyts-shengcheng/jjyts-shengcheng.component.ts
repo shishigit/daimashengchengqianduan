@@ -16,8 +16,6 @@ const yuanshi_shengchengxinxi = {
 })
 export class JjytsShengchengComponent implements OnInit
 {
-
-
     shengchengxinxi = {...yuanshi_shengchengxinxi}
 
     constructor(
@@ -31,14 +29,6 @@ export class JjytsShengchengComponent implements OnInit
     ngOnInit(): void
     {
     }
-
-
-    async fanhuiliebiao()
-    {
-        await this.route.navigateByUrl('zhuye/jjyts/xiangmu')
-        this.shengchengxinxi = {...yuanshi_shengchengxinxi}
-    }
-
 
     shengchengdaima()
     {
