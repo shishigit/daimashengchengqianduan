@@ -33,7 +33,8 @@ import {ShujukuliebiaoComponent} from './zujian/shujukuliebiao/shujukuliebiao.co
 import {HongtiandaimaComponent} from './page/hongtian/hongtiandaima/hongtiandaima.component';
 import {ShujukutableComponent} from './zujian/shujukutable/shujukutable.component';
 import {JjytsXiangmuComponent} from './page/jjyts/jjyts-xiangmu/jjyts-xiangmu.component';
-import {JjytsDaimaComponent} from "./page/jjyts/jjyts-daima/jjyts-danbiaoshengcheng/jjyts-daima.component";
+import {JjytsDaimaComponent} from "./page/jjyts/jjyts-daima/jjyts-daima.component";
+import {JjytsKubiaoComponent} from './page/jjyts/jjyts-kubiao/jjyts-kubiao.component';
 
 @NgModule({
     declarations: [
@@ -46,7 +47,8 @@ import {JjytsDaimaComponent} from "./page/jjyts/jjyts-daima/jjyts-danbiaoshengch
         HongtiandaimaComponent,
         ShujukutableComponent,
         JjytsXiangmuComponent,
-        JjytsDaimaComponent
+        JjytsDaimaComponent,
+        JjytsKubiaoComponent
     ],
     imports: [
         BrowserModule,
