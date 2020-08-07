@@ -35,4 +35,9 @@ export class JjytsShengchengComponent implements OnInit
         this.shengchengxinxi.shujukuid = this.jjytsService.daimashengcheng_shujukuid
         this.httpService.jjyts_shengchengdaima(this.shengchengxinxi)
     }
+
+    async fanhuiliebiao()
+    {
+        await this.route.navigateByUrl('zhuye/jjyts/xiangmu')
+    }
 }

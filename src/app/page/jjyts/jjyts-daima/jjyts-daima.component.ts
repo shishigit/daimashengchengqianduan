@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-jjyts-daima',
@@ -8,18 +7,11 @@ import {Router} from "@angular/router";
 })
 export class JjytsDaimaComponent implements OnInit
 {
-    constructor(
-        private route: Router,
-    )
+    constructor()
     {
     }
 
     ngOnInit(): void
     {
-    }
-
-    async fanhuiliebiao()
-    {
-        await this.route.navigateByUrl('zhuye/jjyts/xiangmu')
     }
 }

@@ -1,1 +1,35 @@
-<p>jjyts-kubiao works!</p>
+<div>
+    <h4 nz-typography style="display: inline-block;margin-bottom: 0">创建库表</h4>
+    <button nz-button style="float: right" (click)="fanhuiliebiao()">返回列表</button>
+</div>
+<nz-divider></nz-divider>
+<div style="margin-bottom: 10px">
+    表名： <input type="text" nz-input [(ngModel)]="chuangjianxinxi.biaoming" style="width: 200px"/>
+    <button nz-button (click)="xinzhengshuxing()" style="float: right">新增属性</button>
+</div>
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+    <tr>
+        <th>列名</th>
+        <th>类型</th>
+        <th>备注</th>
+        <th>唯一</th>
+        <th>非空</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.address }}</td>
+        <td>
+            <a>Action 一 {{ data.name }}</a>
+            <nz-divider nzType="vertical"></nz-divider>
+            <a>Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</nz-table>
