@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {catchError} from "rxjs/operators";
 import {
     httpjiekou_hongtian,
+    httpjiekou_jjyts,
     httpjiekou_shujuyuan,
     httpjiekou_xitong,
     httpjiekou_zaxiang
@@ -131,9 +132,19 @@ export class HttpService
         return this.postForJson<httpjiekou_hongtian.chaxun.Res[]>('/hongtian/chaxun', param)
     }
 
+    jjyts_chaxun(param: httpjiekou_jjyts.chaxun.Req)
+    {
+        return this.postForJson<httpjiekou_jjyts.chaxun.Res[]>('/jjyts/chaxun', param)
+    }
+
     hongtian_tianjia(param: httpjiekou_hongtian.tianjia.Req)
     {
         return this.postForJson<httpjiekou_hongtian.tianjia.Res>('/hongtian/tianjia', param)
+    }
+
+    jjyts_tianjia(param: httpjiekou_jjyts.tianjia.Req)
+    {
+        return this.postForJson<httpjiekou_jjyts.tianjia.Res>('/jjyts/tianjia', param)
     }
 
     hongtian_shanchu(param: httpjiekou_hongtian.shanchu.Req)
@@ -141,8 +152,14 @@ export class HttpService
         return this.postForJson<httpjiekou_hongtian.shanchu.Res>('/hongtian/shanchu', param)
     }
 
+    jjyts_shanchu(param: httpjiekou_jjyts.shanchu.Req)
+    {
+        return this.postForJson<httpjiekou_jjyts.shanchu.Res>('/jjyts/shanchu', param)
+    }
+
     hongtian_shengchengdaima(shengchengxinxi: httpjiekou_hongtian.shengchengdaima.req)
     {
         return this.postForFile('/hongtian/shengchengdaima', shengchengxinxi)
     }
+
 }
