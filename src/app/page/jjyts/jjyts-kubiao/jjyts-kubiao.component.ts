@@ -36,7 +36,8 @@ export class JjytsKubiaoComponent implements OnInit
             weiyi: false,
             beizhu: '未备注',
             leixing: 'string',
-            lieming: 'new_col'
+            lieming: 'new_col',
+            zhujian: false
         })
     }
 
@@ -54,5 +55,12 @@ export class JjytsKubiaoComponent implements OnInit
     chuangjiankubiao()
     {
         this.httpService.jjyts_chuangjiankubiao(this.chuangjianxinxi)
+    }
+
+    zhujiangaibian(data: boolean, lieming: string)
+    {
+        if (!data) return
+        this.chuangjianxinxi.shuxings.forEach(value => value.zhujian = value.lieming === lieming)
+
     }
 }

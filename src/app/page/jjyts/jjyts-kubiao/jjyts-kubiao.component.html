@@ -20,6 +20,7 @@
         <th nzWidth="300px">备注</th>
         <th>唯一</th>
         <th>非空</th>
+        <th>主键</th>
         <th>操作</th>
     </tr>
     </thead>
@@ -41,6 +42,9 @@
         </td>
         <td>
             <label nz-checkbox [(ngModel)]="data.feikong"></label>
+        </td>
+        <td>
+            <label nz-checkbox [(ngModel)]="data.zhujian" (ngModelChange)="zhujiangaibian($event,data.lieming)"></label>
         </td>
         <td>
             <a (click)="shanchushuxing(data.lieming)">删除</a>
