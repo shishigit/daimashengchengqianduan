@@ -42,7 +42,7 @@ export class JjytsDaimaComponent implements OnInit
     shengchengdaima()
     {
         this.shengchengxinxi.shujukuid = this.jjytsService.daimashengcheng_shujukuid
-        this.httpService.hongtian_shengchengdaima(this.shengchengxinxi)
+        this.httpService.jjyts_shengchengdaima(this.shengchengxinxi)
     }
 
 }
