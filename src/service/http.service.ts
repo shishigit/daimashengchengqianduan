@@ -162,4 +162,9 @@ export class HttpService
         return this.postForFile('/hongtian/shengchengdaima', shengchengxinxi)
     }
 
+    jjyts_shengchengdaima(shengchengxinxi: httpjiekou_jjyts.shengchengdaima.req)
+    {
+        return this.postForFile('/jjyts/shengchengdaima', shengchengxinxi)
+    }
+
 }

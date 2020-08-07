@@ -5,7 +5,7 @@ import {Injectable} from '@angular/core';
 })
 export class JjytsService
 {
-    daimashengcheng_shujukuid?: number;
+    daimashengcheng_shujukuid: number = 0;
 
     constructor()
     {
