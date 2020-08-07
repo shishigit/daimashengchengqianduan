@@ -29,10 +29,10 @@ export class HttpService
         return this.httpClient
             .post(this.houtai + url, body, {
                 observe: "response",
-                responseType: "blob"
+                responseType: "arraybuffer"
             })
             .pipe(this.catchError)
-            .subscribe((value: HttpResponse<Blob>) =>
+            .subscribe((value: HttpResponse<ArrayBuffer>) =>
             {
                 let wenjianming = value.headers.get('content-disposition')
                 if (!wenjianming)
@@ -49,7 +49,7 @@ export class HttpService
                 wenjianming = decodeURI(chazhao[1])
 
                 let link = document.createElement('a')
-                link.href = window.URL.createObjectURL(value.body);
+                link.href = window.URL.createObjectURL(new Blob([value.body as ArrayBuffer]));
                 link.download = wenjianming
                 link.click();
             })
@@ -59,6 +59,11 @@ export class HttpService
     {
         if (err instanceof HttpErrorResponse)
         {
+            if (err.error instanceof ArrayBuffer)
+            {
+                (err as any).error = new TextDecoder().decode(err.error)
+            }
+
             if (err.status === 600)
             {
                 this.notification.info('提示', err.error)
@@ -90,7 +95,6 @@ export class HttpService
     {
         return this.postForJson<httpjiekou_xitong.tuichu.Res>('/xitong/tuichu', param)
     }
-
 
     xitong_jingtaiwenjian(param: httpjiekou_xitong.jingtaiwenjian.Req)
     {
