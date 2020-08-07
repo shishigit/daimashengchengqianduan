@@ -7,7 +7,7 @@ import {ShujuyuanComponent} from "./page/shujuyuan/shujuyuan.component";
 import {HongtianliebiaoComponent} from "./page/hongtian/xiangmuliebiao/hongtianliebiao.component";
 import {HongtiandaimaComponent} from "./page/hongtian/hongtiandaima/hongtiandaima.component";
 import {JjytsXiangmuComponent} from "./page/jjyts/jjyts-xiangmu/jjyts-xiangmu.component";
-import {JjytsDaimaComponent} from "./page/jjyts/jjyts-daima/jjyts-daima.component";
+import {JjytsDaimaComponent} from "./page/jjyts/jjyts-daima/jjyts-danbiaoshengcheng/jjyts-daima.component";
 
 const routes: Routes = [
     {

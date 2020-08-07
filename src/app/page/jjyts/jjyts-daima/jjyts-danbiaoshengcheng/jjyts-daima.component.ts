@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {HttpService} from "../../../../service/http.service";
-import {JjytsService} from "../jjyts.service";
+import {HttpService} from "../../../../../service/http.service";
+import {JjytsService} from "../../jjyts.service";
 
 const yuanshi_shengchengxinxi = {
     shujukuid: 0,
