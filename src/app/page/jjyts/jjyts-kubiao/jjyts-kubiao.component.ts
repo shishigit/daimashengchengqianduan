@@ -1,14 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {jjyts_lieleixing_array} from "../../../../qianhoutongyong/tongyongjiegou";
+import {HttpService} from "../../../../service/http.service";
+import {httpjiekou_jjyts} from "../../../../qianhoutongyong/http.jiekou";
 
-interface shitishuxing
-{
-    lieming: string
-    leixing: 'string' | 'number'
-    beizhu: string,
-    weiyi: boolean,
-    feikong: boolean
-}
 
 @Component({
     selector: 'app-jjyts-kubiao',
@@ -17,16 +12,15 @@ interface shitishuxing
 })
 export class JjytsKubiaoComponent implements OnInit
 {
-    chuangjianxinxi: {
-        biaoming: string,
-        shuxings: shitishuxing[]
-    } = {
+    lieleixing = jjyts_lieleixing_array
+    chuangjianxinxi: httpjiekou_jjyts.chuangjiankubiao.req = {
         biaoming: '',
         shuxings: []
     }
 
     constructor(
-        private route: Router
+        private route: Router,
+        private httpService: HttpService
     )
     {
     }
@@ -49,5 +43,16 @@ export class JjytsKubiaoComponent implements OnInit
     async fanhuiliebiao()
     {
         await this.route.navigateByUrl('zhuye/jjyts/xiangmu')
+    }
+
+    shanchushuxing(lieming: string)
+    {
+        this.chuangjianxinxi.shuxings = this.chuangjianxinxi.shuxings
+            .filter(value => value.lieming !== lieming)
+    }
+
+    chuangjiankubiao()
+    {
+        this.httpService.jjyts_chuangjiankubiao(this.chuangjianxinxi)
     }
 }

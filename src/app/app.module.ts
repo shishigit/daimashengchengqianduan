@@ -7,6 +7,7 @@ import {DengluyeComponent} from "./page/dengluye/dengluye.component";
 import {
     NzButtonModule,
     NzCardModule,
+    NzCheckboxModule,
     NzDividerModule,
     NzDrawerModule,
     NzFormModule,
@@ -73,7 +74,8 @@ import {JjytsShjukulieComponent} from './page/jjyts/jjyts-shjukulie/jjyts-shjuku
         NzFormModule,
         NzInputNumberModule,
         NzSelectModule,
-        NzTypographyModule
+        NzTypographyModule,
+        NzCheckboxModule
     ],
     providers: [],
     bootstrap: [AppComponent]

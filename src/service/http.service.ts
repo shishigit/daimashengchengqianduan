@@ -167,4 +167,8 @@ export class HttpService
         return this.postForFile('/jjyts/shengchengdaima', shengchengxinxi)
     }
 
+    jjyts_chuangjiankubiao(kubiaoxinxi: httpjiekou_jjyts.chuangjiankubiao.req)
+    {
+        return this.postForFile('/jjyts/chuangjiankubiao', kubiaoxinxi)
+    }
 }
