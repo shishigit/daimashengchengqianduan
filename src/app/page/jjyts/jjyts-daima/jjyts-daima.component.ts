@@ -34,7 +34,7 @@ export class JjytsDaimaComponent implements OnInit
 
     async fanhuiliebiao()
     {
-        await this.route.navigateByUrl('zhuye/jjyts/liebiao')
+        await this.route.navigateByUrl('zhuye/jjyts/xiangmu')
         this.shengchengxinxi = {...yuanshi_shengchengxinxi}
     }
 
