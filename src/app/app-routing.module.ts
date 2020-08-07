@@ -6,6 +6,7 @@ import {GerenzhongxinComponent} from "./page/gerenzhongxin/gerenzhongxin.compone
 import {ShujuyuanComponent} from "./page/shujuyuan/shujuyuan.component";
 import {HongtianliebiaoComponent} from "./page/hongtian/xiangmuliebiao/hongtianliebiao.component";
 import {HongtiandaimaComponent} from "./page/hongtian/hongtiandaima/hongtiandaima.component";
+import {JjytsXiangmuComponent} from "./page/jjyts/jjyts-xiangmu/jjyts-xiangmu.component";
 
 const routes: Routes = [
     {
@@ -41,7 +42,16 @@ const routes: Routes = [
             {
                 path: 'hongtian/daima',
                 component: HongtiandaimaComponent
-            }
+            },
+            {
+                path: 'jjyts',
+                redirectTo: 'jjyts/xiangmu',
+                pathMatch: 'full'
+            },
+            {
+                path: 'jjyts/xiangmu',
+                component: JjytsXiangmuComponent
+            },
         ]
     },
 ];

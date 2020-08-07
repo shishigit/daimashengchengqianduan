@@ -32,6 +32,7 @@ import {HongtianliebiaoComponent} from './page/hongtian/xiangmuliebiao/hongtianl
 import {ShujukuliebiaoComponent} from './zujian/shujukuliebiao/shujukuliebiao.component';
 import {HongtiandaimaComponent} from './page/hongtian/hongtiandaima/hongtiandaima.component';
 import {ShujukutableComponent} from './zujian/shujukutable/shujukutable.component';
+import {JjytsXiangmuComponent} from './page/jjyts/jjyts-xiangmu/jjyts-xiangmu.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import {ShujukutableComponent} from './zujian/shujukutable/shujukutable.componen
         HongtianliebiaoComponent,
         ShujukuliebiaoComponent,
         HongtiandaimaComponent,
-        ShujukutableComponent
+        ShujukutableComponent,
+        JjytsXiangmuComponent
     ],
     imports: [
         BrowserModule,
