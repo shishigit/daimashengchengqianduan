@@ -1,5 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 
+interface shitishuxing
+{
+    mingcheng: string
+    leixing: 'string' | 'number'
+    beizhu: string,
+    weiyi: boolean,
+    feikong: boolean
+}
+
 @Component({
     selector: 'app-jjyts-kubiao',
     templateUrl: './jjyts-kubiao.component.html',
@@ -7,6 +16,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class JjytsKubiaoComponent implements OnInit
 {
+    chuangjianxinxi: {
+        biaoming: string,
+        shuxings: shitishuxing[]
+    } = {
+        biaoming: '',
+        shuxings: []
+    }
 
     constructor()
     {

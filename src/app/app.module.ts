@@ -36,6 +36,7 @@ import {JjytsXiangmuComponent} from './page/jjyts/jjyts-xiangmu/jjyts-xiangmu.co
 import {JjytsDaimaComponent} from "./page/jjyts/jjyts-daima/jjyts-daima.component";
 import {JjytsKubiaoComponent} from './page/jjyts/jjyts-kubiao/jjyts-kubiao.component';
 import {JjytsShengchengComponent} from './page/jjyts/jjyts-shengcheng/jjyts-shengcheng.component';
+import {JjytsShjukulieComponent} from './page/jjyts/jjyts-shjukulie/jjyts-shjukulie.component';
 
 @NgModule({
     declarations: [
@@ -50,7 +51,8 @@ import {JjytsShengchengComponent} from './page/jjyts/jjyts-shengcheng/jjyts-shen
         JjytsXiangmuComponent,
         JjytsDaimaComponent,
         JjytsKubiaoComponent,
-        JjytsShengchengComponent
+        JjytsShengchengComponent,
+        JjytsShjukulieComponent
     ],
     imports: [
         BrowserModule,
